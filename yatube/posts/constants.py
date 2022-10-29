@@ -1,0 +1,1 @@
+NUM_POSTS_PER_PAGE: str = 10
