@@ -132,3 +132,5 @@ INSTALLED_APPS = [
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+NUM_POSTS_PER_PAGE = 10

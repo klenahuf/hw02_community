@@ -1,12 +1,11 @@
 {%extends 'base.html'%}
 {%block content%}
       <div class="container py-5">
-        <h1>Лев Толстой - зеркало русской революции.
-          <article>
-        </h1>
+        <h1> {{ group.title }} </h1>
         <p>
-          Тайные поклонники графа.
+          {{ group.description }}
         </p>
+        <article>
           {% for post in posts %}
           <ul>
             <li>
@@ -17,7 +16,7 @@
             </li>
           </ul>      
           <p> {{ post.text|linebreaks }}</p>      
-          <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
+          <a href="{% url 'posts:index' %}">Главная страница</a>
           {% if not forloop.last %}
           <hr>{% endif %}
           {% endfor %}
